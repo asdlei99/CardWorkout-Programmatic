@@ -21,7 +21,7 @@ If you are looking for the logic to get the cards from your assets using a loop 
 
 ## Tags
 
-Through these tags you can navigate through each section developed on the app.
+Through these tags you can navigate on each section developed on the app.
 
 ### [initial-setup](https://github.com/fdorado985/CardWorkout-Programmatic/tree/initial-setup)
 
@@ -59,6 +59,12 @@ class CWButton: UIButton {
 
 ### [rules-screen](https://github.com/fdorado985/CardWorkout-Programmatic/tree/rules-screen)
 
-| Screenshot 02 |
+| Screenshot 03 |
 | ------------- |
-| ![ss02](.screenshots/ss02.png) |
+| ![ss03](.screenshots/ss03.png) |
+
+### [app-logic](https://github.com/fdorado985/CardWorkout-Programmatic/tree/app-logic)
+
+| Screenshot 04 |
+| ------------- |
+| ![ss04](.screenshots/ss04.gif) |

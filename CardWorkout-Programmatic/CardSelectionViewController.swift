@@ -17,6 +17,11 @@ class CardSelectionViewController: UIViewController {
   private let restartButton = CWButton(text: "Restart", backgroundColor: .systemGreen)
   private let rulesButton = CWButton(text: "Rules", backgroundColor: .systemBlue)
 
+  // MARK: - Properties
+
+  private var cards = Deck.allValues
+  private var timer: Timer!
+
   // MARK: - View Lifecycle
 
   override func viewDidLoad() {
@@ -25,13 +30,38 @@ class CardSelectionViewController: UIViewController {
     configureImageView()
     configureStopButton()
     configureRestartAndRulesButtons()
+    startTimer()
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    timer.invalidate()
   }
 
   // MARK: - Actions
 
+  @objc private func stopButtonDidTap(_ sender: UIButton) {
+    timer.invalidate()
+  }
+
+  @objc private func restartButtonDidTap(_ sender: UIButton) {
+    timer.invalidate()
+    startTimer()
+  }
+
   @objc private func rulesButtonDidTap(_ sender: UIButton) {
     let rulesVC = RulesViewController()
     present(rulesVC, animated: true)
+  }
+
+  // MARK: - Methods
+
+  private func startTimer() {
+    timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomImage), userInfo: nil, repeats: true)
+  }
+
+  @objc private func showRandomImage() {
+    imageView.image = cards.randomElement() ?? UIImage(named: "AS")
   }
 }
 
@@ -57,6 +87,7 @@ extension CardSelectionViewController {
 
   private func configureStopButton() {
     view.addSubview(stopButton)
+    stopButton.addTarget(self, action: #selector(stopButtonDidTap), for: .touchUpInside)
     NSLayoutConstraint.activate([
       stopButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 50),
       stopButton.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
@@ -68,6 +99,7 @@ extension CardSelectionViewController {
   private func configureRestartAndRulesButtons() {
     view.addSubview(restartButton)
     view.addSubview(rulesButton)
+    restartButton.addTarget(self, action: #selector(restartButtonDidTap), for: .touchUpInside)
     rulesButton.addTarget(self, action: #selector(rulesButtonDidTap), for: .touchUpInside)
     NSLayoutConstraint.activate([
       restartButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20),
