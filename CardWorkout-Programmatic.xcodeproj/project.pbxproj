@@ -13,6 +13,7 @@
 		A9427925245811B300777783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9427924245811B300777783 /* Assets.xcassets */; };
 		A9427928245811B300777783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9427926245811B300777783 /* LaunchScreen.storyboard */; };
 		A94279312458169C00777783 /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94279302458169C00777783 /* CWButton.swift */; };
+		A942793524588C6B00777783 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A942793424588C6B00777783 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A9427927245811B300777783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9427929245811B300777783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A94279302458169C00777783 /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
+		A942793424588C6B00777783 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A9427926245811B300777783 /* LaunchScreen.storyboard */,
 				A9427929245811B300777783 /* Info.plist */,
 				A94279302458169C00777783 /* CWButton.swift */,
+				A942793424588C6B00777783 /* RulesViewController.swift */,
 			);
 			path = "CardWorkout-Programmatic";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A942793524588C6B00777783 /* RulesViewController.swift in Sources */,
 				A9427920245811B200777783 /* CardSelectionViewController.swift in Sources */,
 				A942791C245811B200777783 /* AppDelegate.swift in Sources */,
 				A942791E245811B200777783 /* SceneDelegate.swift in Sources */,

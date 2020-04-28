@@ -56,3 +56,9 @@ class CWButton: UIButton {
 | Screenshot 02 |
 | ------------- |
 | ![ss02](.screenshots/ss02.png) |
+
+### [rules-screen](https://github.com/fdorado985/CardWorkout-Programmatic/tree/rules-screen)
+
+| Screenshot 02 |
+| ------------- |
+| ![ss02](.screenshots/ss02.png) |

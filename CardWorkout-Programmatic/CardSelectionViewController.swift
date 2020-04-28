@@ -27,7 +27,17 @@ class CardSelectionViewController: UIViewController {
     configureRestartAndRulesButtons()
   }
 
-  // MARK: - Methods
+  // MARK: - Actions
+
+  @objc private func rulesButtonDidTap(_ sender: UIButton) {
+    let rulesVC = RulesViewController()
+    present(rulesVC, animated: true)
+  }
+}
+
+// MARK: - Configure Views
+
+extension CardSelectionViewController {
 
   private func configureViewController() {
     view.backgroundColor = .systemBackground
@@ -58,6 +68,7 @@ class CardSelectionViewController: UIViewController {
   private func configureRestartAndRulesButtons() {
     view.addSubview(restartButton)
     view.addSubview(rulesButton)
+    rulesButton.addTarget(self, action: #selector(rulesButtonDidTap), for: .touchUpInside)
     NSLayoutConstraint.activate([
       restartButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20),
       restartButton.leadingAnchor.constraint(equalTo: stopButton.leadingAnchor),
