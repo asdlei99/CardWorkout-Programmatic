@@ -28,3 +28,25 @@ Through these tags you can navigate through each section developed on the app.
 | Screenshot 01 |
 | ------------- |
 | ![ss01](.screenshots/ss01.png) |
+
+### [custom-button](https://github.com/fdorado985/CardWorkout-Programmatic/tree/custom-button)
+
+```swift
+class CWButton: UIButton {
+
+  // MARK: - View Lifecycle
+
+  init(text: String, backgroundColor: UIColor?) {
+    super.init(frame: .zero)
+    setTitle(text, for: .normal)
+    self.backgroundColor = backgroundColor
+    self.titleLabel?.font = .boldSystemFont(ofSize: 19)
+    self.layer.cornerRadius = 8
+    translatesAutoresizingMaskIntoConstraints = false
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+}
+```
